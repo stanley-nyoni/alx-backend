@@ -5,7 +5,6 @@ from base_caching import BaseCaching
 
 class BasicCache(BaseCaching):
     """retrieving items from a dictionary."""
-  
     def put(self, key, item):
         """Adds an item in the cache.
         """
