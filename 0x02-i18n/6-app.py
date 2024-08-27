@@ -7,7 +7,6 @@ from flask import Flask, render_template, request, g
 
 class Config:
     """Represents a Flask Babel."""
-  
     LANGUAGES = ["en", "fr"]
     BABEL_DEFAULT_LOCALE = "en"
     BABEL_DEFAULT_TIMEZONE = "UTC"
@@ -27,7 +26,6 @@ users = {
 
 def get_user() -> Union[Dict, None]:
     """Retrieves a user."""
-  
     login_id = request.args.get('login_as', '')
     if login_id:
         return users.get(int(login_id), None)
